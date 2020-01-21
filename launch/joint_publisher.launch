@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="joints_updater" pkg="fake_joint_position_publisher" type="joint_publisher.py" output="screen">
+        <rosparam command="load" file="$(find fake_joint_position_publisher)/config/joints.yaml"/>
+    </node>
+</launch>
