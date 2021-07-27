@@ -34,7 +34,7 @@ class JointPublisher(RComponent):
         self.current_time = rospy.get_time()
         self.last_time = rospy.get_time()
 
-        self.joint_state_publisher = rospy.Publisher('joint_states', JointState, queue_size=1)
+        self.joint_state_publisher = rospy.Publisher('~joint_states', JointState, queue_size=1)
         self.service_srv = rospy.Service('~set_joint', SetJoint, self.set_joint_cb)
         self.service_srv = rospy.Service('~set_joints', SetJoints, self.set_joints_cb)
 
